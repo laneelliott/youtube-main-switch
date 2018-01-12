@@ -1,0 +1,27 @@
+{
+  "name": "youtube-main-switch",
+  "version": "1.0.0",
+  "description": "Dashboard to switch streams",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laneelliott/youtube-main-switch.git"
+  },
+  "author": "Lane Anderson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laneelliott/youtube-main-switch/issues"
+  },
+  "homepage": "https://github.com/laneelliott/youtube-main-switch#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongojs": "^2.4.1",
+    "morgan": "^1.9.0"
+  }
+}
