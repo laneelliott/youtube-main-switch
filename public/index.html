@@ -2,60 +2,74 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Book Tracker</title>
-    <style>
-      #unread, #read {
-        width: 40%;
-        background-color: antiquewhite;
+    <title>Stream Controller</title>
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style type="text/css">
+      .f-right {
+        float: right;
+        text-align: right;
       }
-      #unread { float: left; }
-      #read { float: right; }
-      table, td {
-        border-width: 1px;
-        border-style: solid;
-        border-color: black;
-      }
-      #wrapper {
-        width: 960px;
-        padding-top: 10%;
-        margin-left: auto;
-        margin-right: auto;
+      .jumbotron {
+        background-color: gainsboro;
         text-align: center;
       }
-      body {
-        font-family: sans-serif;
-        background-color: #C0FFEE;
+      .btn {
+        border: 10px solid gainsboro;
       }
-      #results { margin-top: 50px; }
-      #userinput { font-size: 24px; }
-      input {
-        width: 50%;
-        height: 36px;
-        font-size: 24px;
+      .btn:hover {
+        border-color: #BCED91;
+        transition: .3s;
+      }
+      .active {
+        border-color: #476A34;
+      }
+      .boxcast-btn img {
+        width: 300px;
+        height: 300px;
+        float: right;
       }
     </style>
   </head>
   <body>
-    <div id="wrapper">
-      <h1>Book Tracker 4000</h1>
-      <h2><i>The latest and greatest in book tracking technology!</i></h2>
-      <form id="userinput">
-          <input type="text" id="title" placeholder="Book Title"/>
-        <br />
-          <input type="text" id="author" placeholder="Book Author"/>
-        <br />
-        <button type="submit" id="addbook">Add New</button>
-      </form>
-      <div id="results">
-        <table id="unread">
-              <tr><th>Title</th><th>Author</th><th>Read/Unread</th></tr>
-        </table>
-        <table id="read">
-              <tr><th>Title</th><th>Author</th><th>Read/Unread</th></tr>
-        </table>
+    <div class="container">
+      <div class="jumbotron">
+        <div class="stream-headline">
+          <h1>Current Stream Status | Youtube</h1>
+        </div>
       </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-5">
+          <div class="youtube-btn btn btn-alert">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/YouTube_social_white_square_%282017%29.svg">
+          </div>
+        </div>
+        <div class="col-sm-5 f-right">
+          <div class="boxcast-btn btn btn-alert">
+            <img src="https://cdn2.hubspot.net/hubfs/484866/May2016/HowItWorksBoxCaster.png">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" style="margin-top: 20px;">
+      <div class="row">
+        <div class="col-sm-6">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/hJSLk3hRIZY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="col-sm-6 f-right">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/JQHGHKSVUME" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS CDN -->
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
